@@ -1,8 +1,8 @@
-const mongoos = require('mongoose');
+const mongoose = require('mongoose');
 const slugify = require('slugify');
 const geocoder = require('../utils/geocoder');
 
-const BootcampSchema = new mongoos.Schema({
+const BootcampSchema = new mongoose.Schema({
   name: {
     type: String,
     required: [true, 'Please add a name'],
@@ -129,4 +129,4 @@ BootcampSchema.pre('save', async function (next) {
   next();
 });
 
-module.exports = mongoos.model('Bootcamp', BootcampSchema);
+module.exports = mongoose.model('Bootcamp', BootcampSchema);
