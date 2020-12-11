@@ -39,7 +39,7 @@ const imoprtData = async () => {
   try {
     await Bootcamps.create(bootcamps);
     await Course.create(courses);
-    await Course.create(users);
+    await User.create(users);
     console.log('Data Imported...'.green.inverse);
     process.exit();
   } catch (err) {
